@@ -73,7 +73,15 @@ const App: React.FC = () => {
             </button>
         </div>
 
-        <main className="absolute inset-0 flex items-center justify-center gap-8 md:gap-12 lg:gap-16 z-5">
+        <main className="absolute inset-0 flex items-center justify-center gap-4 sm:gap-6 md:gap-8 z-5">
+            <StoryCard
+                imageUrl="https://imgg.io/images/2025/10/15/84def9fe275959bae41a6deb65555553.jpg"
+                altText="بطاقة قصة عن الاتجاهات، قادمة قريباً"
+                ariaLabel="القصة الثالثة (غير متوفرة حالياً)"
+                isCompleted={false}
+                isDisabled={true}
+                onClick={() => {}}
+            />
             <StoryCard
                 imageUrl="https://imgg.io/images/2025/10/15/f1e5071f8d3e9f2ece338374e1694e69.jpg"
                 altText="بطاقة قصة جديدة، قادمة قريباً"
