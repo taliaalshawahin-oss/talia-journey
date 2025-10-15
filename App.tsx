@@ -75,13 +75,6 @@ const App: React.FC = () => {
 
         <main className="absolute inset-0 flex items-center justify-center gap-8 md:gap-12 lg:gap-16 z-5">
             <StoryCard
-                imageUrl="https://imgg.io/images/2025/10/14/fbb1095a06aeef6b9fcf1945c1257394.jpg"
-                altText="شخصية ولد يشير، اضغط لبدء القصة"
-                ariaLabel="بدء قصة ريد ولعبته المفقودة"
-                isCompleted={isStoryOneCompleted}
-                onClick={() => setPage('story')}
-            />
-            <StoryCard
                 imageUrl="https://imgg.io/images/2025/10/15/f1e5071f8d3e9f2ece338374e1694e69.jpg"
                 altText="بطاقة قصة جديدة، قادمة قريباً"
                 ariaLabel="القصة الثانية (غير متوفرة حالياً)"
@@ -89,9 +82,16 @@ const App: React.FC = () => {
                 isDisabled={true}
                 onClick={() => {}}
             />
+            <StoryCard
+                imageUrl="https://imgg.io/images/2025/10/14/fbb1095a06aeef6b9fcf1945c1257394.jpg"
+                altText="شخصية ولد يشير، اضغط لبدء القصة"
+                ariaLabel="بدء قصة ريد ولعبته المفقودة"
+                isCompleted={isStoryOneCompleted}
+                onClick={() => setPage('story')}
+            />
         </main>
         
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5 z-10">
             <img 
                 src="https://imgg.io/images/2025/10/14/3ae4123141317779b2166a701502fde2.png" 
                 alt="شخصية بنت تشير"

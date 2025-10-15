@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Cloud from './Cloud';
 
 interface StoryPageProps {
@@ -79,6 +79,15 @@ const storyContent = [
 
 const StoryPage: React.FC<StoryPageProps> = ({ onBack, onFinish }) => {
     const [storyStep, setStoryStep] = useState(0);
+
+    // Preload images for a smoother experience
+    useEffect(() => {
+        storyContent.forEach(content => {
+            const img = new Image();
+            img.src = content.image;
+        });
+    }, []); // Empty dependency array ensures this runs only once on mount
+
 
     const handleNext = () => {
         if (storyStep < storyContent.length - 1) {
